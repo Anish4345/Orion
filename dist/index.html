@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Orion — A next-generation creative studio designing the future of digital worlds through real-time 3D, immersive campaigns, and bold brand experiences."
+    />
+    <meta name="theme-color" content="#050510" />
+    <title>Orion — Digital Creative Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <div id="page-loader" class="page-loader" aria-hidden="true">
+      <div class="page-loader__inner">
+        <p class="page-loader__label font-mono">Loading</p>
+        <div class="page-loader__letters" aria-hidden="true">
+          <span>O</span><span>R</span><span>I</span><span>O</span><span>N</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="custom-cursor" class="custom-cursor" aria-hidden="true">
+      <span class="custom-cursor__dot"></span>
+      <span class="custom-cursor__label font-mono"></span>
+    </div>
+
+    <canvas id="confetti-canvas" class="confetti-canvas" aria-hidden="true"></canvas>
+
+    <a href="#main" class="skip-link font-mono">Skip to main content</a>
+
+    <header class="site-header" id="top">
+      <nav class="site-nav container" aria-label="Primary">
+        <a href="#hero" class="site-logo magnetic" data-magnetic data-cursor-label="Home">
+          <span class="site-logo__mark font-mono" aria-hidden="true">OR</span>
+          <span class="site-logo__text font-display"
+            >Or<span class="text-accent">ion</span></span
+          >
+        </a>
+        <ul class="site-nav__links font-mono">
+          <li><a href="#work" class="nav-link magnetic" data-magnetic data-cursor-label="View">Work</a></li>
+          <li><a href="#services" class="nav-link magnetic" data-magnetic data-cursor-label="View">Services</a></li>
+          <li><a href="#about" class="nav-link magnetic" data-magnetic data-cursor-label="View">About</a></li>
+          <li><a href="#contact" class="nav-link magnetic" data-magnetic data-cursor-label="View">Contact</a></li>
+        </ul>
+        <a
+          href="#contact"
+          class="btn btn--primary magnetic font-mono"
+          data-magnetic
+          data-cursor-label="Send"
+        >
+          Let's Talk
+          <svg class="icon icon--sm" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section id="hero" class="section hero section--reveal" aria-labelledby="hero-heading">
+        <div class="hero3d scene-tilt-host" aria-hidden="true">
+          <div class="hero3d__stage">
+            <div class="hero3d__cube">
+              <div class="hero3d__face hero3d__face--front"></div>
+              <div class="hero3d__face hero3d__face--back"></div>
+              <div class="hero3d__face hero3d__face--right"></div>
+              <div class="hero3d__face hero3d__face--left"></div>
+              <div class="hero3d__face hero3d__face--top"></div>
+              <div class="hero3d__face hero3d__face--bottom"></div>
+            </div>
+            <div class="hero3d__torus">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span
+              ><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="hero3d__octa">
+              <div class="hero3d__octa-top"></div>
+              <div class="hero3d__octa-bottom"></div>
+            </div>
+          </div>
+        </div>
+        <div class="hero__grain" aria-hidden="true"></div>
+        <div class="container hero__grid">
+          <p class="eyebrow font-mono hero__eyebrow">
+            <span class="hero__pulse" aria-hidden="true"></span>
+            Where imagination meets velocity
+          </p>
+          <h1 id="hero-heading" class="hero__title font-display">
+            <span class="hero__title-line" data-split>We design the</span>
+            <span class="hero__title-line hero__title-line--accent">
+              <span id="hero-scramble" class="hero__scramble">future</span>
+            </span>
+            <span class="hero__title-line" data-split>of digital worlds</span>
+          </h1>
+          <p class="hero__lede font-body">
+            Orion is a next-generation creative studio that transforms ideas into real-time 3D worlds — immersive,
+            interactive, and impossible to forget.
+          </p>
+          <div class="hero__actions">
+            <a href="#work" class="btn btn--solid magnetic font-mono" data-magnetic data-cursor-label="Drag">
+              Explore Work
+              <svg class="icon icon--sm" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+          <div class="hero__scroll font-mono" role="status">
+            <span class="hero__scroll-label">Scroll to explore</span>
+            <span class="hero__scroll-mouse" aria-hidden="true">
+              <span class="hero__scroll-wheel"></span>
+            </span>
+          </div>
+          <p class="section-num font-mono" aria-hidden="true">§ 01 / 06</p>
+        </div>
+      </section>
+
+      <section id="work" class="work section--reveal" aria-labelledby="work-heading">
+        <div class="work__pin" id="work-pin">
+          <div class="work__sticky">
+            <div class="container work__header">
+              <p class="eyebrow font-mono">Selected Work</p>
+              <h2 id="work-heading" class="font-display work__heading">
+                <span data-split>Projects that</span><br />
+                <span class="text-accent" data-split>push limits</span>
+              </h2>
+            </div>
+            <div class="work__track-wrap scene-tilt-host">
+              <div class="work__track" id="work-track">
+                <article class="project-card" data-card-index="0" style="--accent: #7c3aed">
+                  <div class="project-card__tilt" data-tilt>
+                  <div class="project-card__inner">
+                    <span class="project-card__num font-mono">01</span>
+                    <span class="project-card__badge font-mono" style="--dot: #a855f7">Roleplay</span>
+                    <h3 class="project-card__title font-display">NovaSphere</h3>
+                    <p class="project-card__desc font-body">
+                      Full-immersion 3D product configurator for a luxury automotive brand. Real-time GPU rendering
+                      meets interactive spatial design.
+                    </p>
+                    <ul class="project-card__tags font-mono">
+                      <li>WebGL</li>
+                      <li>Three.js</li>
+                      <li>GSAP</li>
+                    </ul>
+                    <a href="#contact" class="project-card__link magnetic font-mono" data-magnetic data-cursor-label="View">
+                      View Project →
+                    </a>
+                  </div>
+                  <div class="project-card__visual" aria-hidden="true" style="--accent: #7c3aed"></div>
+                  </div>
+                </article>
+                <article class="project-card" data-card-index="1" style="--accent: #00d4ff">
+                  <div class="project-card__tilt" data-tilt>
+                  <div class="project-card__inner">
+                    <span class="project-card__num font-mono">02</span>
+                    <span class="project-card__badge font-mono" style="--dot: #22d3ee">Exploration</span>
+                    <h3 class="project-card__title font-display">Parallax OS</h3>
+                    <p class="project-card__desc font-body">
+                      Award-winning interactive microsite. A layered scrolling narrative that unfolds across infinite
+                      digital depth — light, space, time.
+                    </p>
+                    <ul class="project-card__tags font-mono">
+                      <li>React</li>
+                      <li>Framer Motion</li>
+                      <li>WebGL</li>
+                    </ul>
+                    <a href="#contact" class="project-card__link magnetic font-mono" data-magnetic data-cursor-label="View">
+                      View Project →
+                    </a>
+                  </div>
+                  <div class="project-card__visual" aria-hidden="true" style="--accent: #00d4ff"></div>
+                  </div>
+                </article>
+                <article class="project-card" data-card-index="2" style="--accent: #a855f7">
+                  <div class="project-card__tilt" data-tilt>
+                  <div class="project-card__inner">
+                    <span class="project-card__num font-mono">03</span>
+                    <span class="project-card__badge font-mono" style="--dot: #7c3aed">Simulation</span>
+                    <h3 class="project-card__title font-display">Void Protocol</h3>
+                    <p class="project-card__desc font-body">
+                      AI-generative installation exhibited across 6 cities. Real-time shader art simulating the emergence
+                      of digital consciousness.
+                    </p>
+                    <ul class="project-card__tags font-mono">
+                      <li>GLSL</li>
+                      <li>R3F</li>
+                      <li>Post-Processing</li>
+                    </ul>
+                    <a href="#contact" class="project-card__link magnetic font-mono" data-magnetic data-cursor-label="View">
+                      View Project →
+                    </a>
+                  </div>
+                  <div class="project-card__visual" aria-hidden="true" style="--accent: #a855f7"></div>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <p class="work__scroll-hint font-mono" aria-hidden="true">Scroll</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section process section--reveal" aria-labelledby="process-heading">
+        <div class="container process__grid">
+          <div class="process__intro">
+            <p class="eyebrow font-mono">Our process</p>
+            <h2 id="process-heading" class="font-display process__title">
+              How we <span class="text-accent" data-split>create</span>
+            </h2>
+            <p class="process__lede font-body">
+              We fuse bold creative thinking with deep technical mastery. The result? Digital products that feel
+              impossibly good — not just on a screen, but on a
+              <span class="text-accent font-semibold"> visceral, human level.</span>
+            </p>
+          </div>
+          <div class="process__timeline-wrap">
+            <svg class="process__line" id="process-line" viewBox="0 0 4 400" preserveAspectRatio="none" aria-hidden="true">
+              <path id="process-path" d="M2 0 L2 400" stroke="currentColor" stroke-width="2" fill="none" vector-effect="non-scaling-stroke" />
+            </svg>
+            <ol class="process__steps">
+              <li class="process-step" data-step>
+                <span class="process-step__num font-mono">01</span>
+                <div>
+                  <h3 class="process-step__title font-display">Vision-first design</h3>
+                  <p class="process-step__desc font-body">
+                    Every project begins with a deep creative brief. We find the idea before we find the pixel.
+                  </p>
+                </div>
+              </li>
+              <li class="process-step" data-step>
+                <span class="process-step__num font-mono">02</span>
+                <div>
+                  <h3 class="process-step__title font-display">Engineer the impossible</h3>
+                  <p class="process-step__desc font-body">
+                    Our developers push WebGL, shaders, and real-time graphics beyond what any template can do.
+                  </p>
+                </div>
+              </li>
+              <li class="process-step" data-step>
+                <span class="process-step__num font-mono">03</span>
+                <div>
+                  <h3 class="process-step__title font-display">Ship at warp speed</h3>
+                  <p class="process-step__desc font-body">
+                    Agile sprints, live previews, and obsessive QA mean your product lands fast — and perfectly.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+          <ul class="process__stats font-mono" id="process-stats">
+            <li><span class="stat-value" data-count="85" data-suffix="+">0</span><span class="stat-label">WebGL scenes shipped</span></li>
+            <li><span class="stat-value" data-count="60" data-suffix="">0</span><span class="stat-label">Avg. FPS target</span></li>
+            <li><span class="stat-value" data-count="18" data-suffix="k+">0</span><span class="stat-label">Lines of shader code</span></li>
+            <li><span class="stat-value" data-count="24" data-suffix="">0</span><span class="stat-label">Awards won</span></li>
+          </ul>
+          <p class="section-num font-mono" aria-hidden="true">§ 02 / 06</p>
+        </div>
+      </section>
+
+      <section id="services" class="section services section--reveal" aria-labelledby="services-heading">
+        <div class="marquee marquee--top font-mono" aria-hidden="true">
+          <div class="marquee__inner">
+            <span>Three.js</span><span>·</span><span>WebGL</span><span>·</span><span>GSAP</span><span>·</span
+            ><span>React Three Fiber</span><span>·</span><span>Shader Art</span><span>·</span
+            ><span>Motion Design</span><span>·</span><span>Immersive Web</span><span>·</span><span>Real-time 3D</span
+            ><span>·</span>
+            <span>Three.js</span><span>·</span><span>WebGL</span><span>·</span><span>GSAP</span><span>·</span
+            ><span>React Three Fiber</span><span>·</span><span>Shader Art</span><span>·</span
+            ><span>Motion Design</span><span>·</span><span>Immersive Web</span><span>·</span><span>Real-time 3D</span
+            ><span>·</span>
+          </div>
+        </div>
+        <div class="container">
+          <p class="eyebrow font-mono">CAPABILITIES</p>
+          <h2 id="services-heading" class="font-display services__heading">
+            What we do
+          </h2>
+          <p class="services__sub font-display">
+            Core <span class="text-accent">Services</span>
+          </p>
+          <ul class="services__grid">
+            <li class="service-card" data-tilt style="--card: #7c3aed">
+              <div class="service-card__layers">
+                <span class="service-card__icon service-card__z" aria-hidden="true">⚡</span>
+                <h3 class="service-card__title font-display service-card__z">Real-time 3D</h3>
+                <p class="service-card__desc font-body service-card__z">
+                  WebGL-powered experiences with React Three Fiber, custom shaders, and GPU-accelerated rendering.
+                </p>
+              </div>
+            </li>
+            <li class="service-card" data-tilt style="--card: #00d4ff">
+              <div class="service-card__layers">
+                <span class="service-card__icon service-card__z" aria-hidden="true">🎬</span>
+                <h3 class="service-card__title font-display service-card__z">Motion Design</h3>
+                <p class="service-card__desc font-body service-card__z">
+                  Micro-animations, scroll-driven storytelling, and frame-perfect transitions using GSAP.
+                </p>
+              </div>
+            </li>
+            <li class="service-card" data-tilt style="--card: #ff2d78">
+              <div class="service-card__layers">
+                <span class="service-card__icon service-card__z" aria-hidden="true">🧬</span>
+                <h3 class="service-card__title font-display service-card__z">Brand Systems</h3>
+                <p class="service-card__desc font-body service-card__z">
+                  Comprehensive design systems built for scale — tokens, components, and living documentation.
+                </p>
+              </div>
+            </li>
+            <li class="service-card" data-tilt style="--card: #a855f7">
+              <div class="service-card__layers">
+                <span class="service-card__icon service-card__z" aria-hidden="true">🌐</span>
+                <h3 class="service-card__title font-display service-card__z">Immersive Web</h3>
+                <p class="service-card__desc font-body service-card__z">
+                  Next-generation websites that combine cutting-edge tech with breathtaking visual design.
+                </p>
+              </div>
+            </li>
+            <li class="service-card" data-tilt style="--card: #00d4ff">
+              <div class="service-card__layers">
+                <span class="service-card__icon service-card__z" aria-hidden="true">🤖</span>
+                <h3 class="service-card__title font-display service-card__z">AI Interfaces</h3>
+                <p class="service-card__desc font-body service-card__z">
+                  Human-first interfaces for AI products — making complex systems feel magical and intuitive.
+                </p>
+              </div>
+            </li>
+            <li class="service-card" data-tilt style="--card: #7c3aed">
+              <div class="service-card__layers">
+                <span class="service-card__icon service-card__z" aria-hidden="true">🎮</span>
+                <h3 class="service-card__title font-display service-card__z">Interactive Campaigns</h3>
+                <p class="service-card__desc font-body service-card__z">
+                  Award-winning digital campaigns with game-like interaction models and viral mechanics.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <p class="section-num font-mono container" aria-hidden="true">§ 03 / 06</p>
+      </section>
+
+      <section id="about" class="section about section--reveal" aria-labelledby="about-heading">
+        <div class="container about__grid">
+          <div class="about__copy">
+            <p class="eyebrow font-mono">Who we are</p>
+            <h2 id="about-heading" class="font-display about__title">
+              Born from the space<br />
+              between <span class="text-accent">art &amp; code</span>
+            </h2>
+            <p class="about__p font-body">
+              Orion is a creative studio obsessed with the intersection of technology and human emotion. We sculpt
+              digital worlds — real-time 3D, immersive campaigns, and interfaces that feel impossibly alive.
+            </p>
+            <p class="about__p font-body">
+              Founded in 2019, our team of designers, engineers, and storytellers has shipped work for category-defining
+              brands across six continents. We don't just build websites — we engineer experiences that redefine what
+              the web can feel like.
+            </p>
+          </div>
+          <div class="about__visual">
+            <p class="about__pill font-mono">
+              <span class="about__pill-dot" aria-hidden="true"></span>
+              Live 3D render
+            </p>
+            <div class="about__orb-wrap scene-tilt-host">
+              <div class="orb3d" id="orb3d" aria-hidden="true">
+                <div class="orb3d__rings" aria-hidden="true"></div>
+                <div class="orb3d__core"></div>
+                <div class="orb3d__shine"></div>
+                <span class="orb3d__badge font-mono">art ⇄ code</span>
+              </div>
+            </div>
+            <ul class="about__team">
+              <li class="team-pill" style="--c: #7c3aed">
+                <span class="team-pill__avatar font-mono" aria-hidden="true">A</span>
+                <div>
+                  <p class="team-pill__name font-body">Aria Chen</p>
+                  <p class="team-pill__role font-mono">Creative Director</p>
+                </div>
+              </li>
+              <li class="team-pill" style="--c: #00d4ff">
+                <span class="team-pill__avatar font-mono" aria-hidden="true">M</span>
+                <div>
+                  <p class="team-pill__name font-body">Marcus Reeve</p>
+                  <p class="team-pill__role font-mono">3D Engineer</p>
+                </div>
+              </li>
+              <li class="team-pill" style="--c: #ff2d78">
+                <span class="team-pill__avatar font-mono" aria-hidden="true">Z</span>
+                <div>
+                  <p class="team-pill__name font-body">Zoe Laurent</p>
+                  <p class="team-pill__role font-mono">Motion Designer</p>
+                </div>
+              </li>
+              <li class="team-pill" style="--c: #a855f7">
+                <span class="team-pill__avatar font-mono" aria-hidden="true">K</span>
+                <div>
+                  <p class="team-pill__name font-body">Kai Tanaka</p>
+                  <p class="team-pill__role font-mono">Full-Stack Engineer</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <ul class="about__stats">
+            <li>
+              <span class="about-stat__val font-display" data-count="120" data-suffix="+">0</span>
+              <span class="about-stat__lbl font-mono">Projects shipped</span>
+            </li>
+            <li>
+              <span class="about-stat__val font-display" data-count="8" data-suffix="yrs">0</span>
+              <span class="about-stat__lbl font-mono">Of experience</span>
+            </li>
+            <li>
+              <span class="about-stat__val font-display" data-count="40" data-suffix="+">0</span>
+              <span class="about-stat__lbl font-mono">Global clients</span>
+            </li>
+            <li>
+              <span class="about-stat__val font-display" data-count="99" data-suffix="%">0</span>
+              <span class="about-stat__lbl font-mono">Client satisfaction</span>
+            </li>
+          </ul>
+          <p class="section-num font-mono" aria-hidden="true">§ 04 / 06</p>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact section--reveal" aria-labelledby="contact-heading">
+        <div class="container contact__grid">
+          <div class="contact__intro">
+            <p class="eyebrow font-mono">Get in touch</p>
+            <h2 id="contact-heading" class="font-display contact__title">
+              Ready to build<br />
+              something <span class="text-accent">iconic?</span>
+            </h2>
+            <p class="contact__lede font-body">
+              Whether you have a clear vision or a blank canvas, we'd love to explore what we can create together. Drop
+              us a message and we'll respond within 24 hours.
+            </p>
+            <ul class="contact__info">
+              <li class="contact-info-row">
+                <span class="contact-info-row__icon" aria-hidden="true">📧</span>
+                <div>
+                  <p class="font-mono contact-info-row__label">Email</p>
+                  <p class="font-body"><a href="mailto:hello@orion.studio">hello@orion.studio</a></p>
+                </div>
+              </li>
+              <li class="contact-info-row">
+                <span class="contact-info-row__icon" aria-hidden="true">📍</span>
+                <div>
+                  <p class="font-mono contact-info-row__label">Location</p>
+                  <p class="font-body">Remote — Worldwide</p>
+                </div>
+              </li>
+              <li class="contact-info-row">
+                <span class="contact-info-row__icon" aria-hidden="true">⏰</span>
+                <div>
+                  <p class="font-mono contact-info-row__label">Response</p>
+                  <p class="font-body">Within 24 hours</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="contact__form-wrap">
+            <form id="contact-form" class="contact-form" novalidate>
+              <div id="form-success" class="form-success" role="status" aria-live="polite" tabindex="-1" hidden>
+                <p class="form-success__emoji" aria-hidden="true">🚀</p>
+                <h3 class="font-display form-success__title">Message sent!</h3>
+                <p class="font-body form-success__text">We'll reach out within 24 hours. Exciting things ahead ✨</p>
+              </div>
+              <div id="form-fields" class="form-fields">
+                <div class="form-row">
+                  <div class="field" data-field>
+                    <label class="font-mono field__label" for="name">Your name</label>
+                    <input class="field__input font-body" id="name" name="name" type="text" autocomplete="name" placeholder="Jane Doe" required />
+                    <svg class="field__ring" aria-hidden="true"><rect class="field__ring-rect" width="100%" height="100%" rx="12" /></svg>
+                  </div>
+                  <div class="field" data-field>
+                    <label class="font-mono field__label" for="email">Email address</label>
+                    <input
+                      class="field__input font-body"
+                      id="email"
+                      name="email"
+                      type="email"
+                      autocomplete="email"
+                      placeholder="jane@company.com"
+                      required
+                    />
+                    <svg class="field__ring" aria-hidden="true"><rect class="field__ring-rect" width="100%" height="100%" rx="12" /></svg>
+                  </div>
+                </div>
+                <div class="field" data-field>
+                  <label class="font-mono field__label" for="company">Company</label>
+                  <input class="field__input font-body" id="company" name="company" type="text" autocomplete="organization" placeholder="Your company" />
+                  <svg class="field__ring" aria-hidden="true"><rect class="field__ring-rect" width="100%" height="100%" rx="12" /></svg>
+                </div>
+                <div class="field" data-field>
+                  <label class="font-mono field__label" for="budget">Budget</label>
+                  <select class="field__input field__select font-body" id="budget" name="budget" required>
+                    <option value="">Select budget…</option>
+                    <option value="lt10">&lt; $10k</option>
+                    <option value="10-50">$10k–$50k</option>
+                    <option value="50-150">$50k–$150k</option>
+                    <option value="150+">$150k+</option>
+                  </select>
+                  <svg class="field__ring" aria-hidden="true"><rect class="field__ring-rect" width="100%" height="100%" rx="12" /></svg>
+                </div>
+                <div class="field" data-field>
+                  <label class="font-mono field__label" for="message">Tell us about your project</label>
+                  <textarea
+                    class="field__input field__textarea font-body"
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="What are you building? What's the vision?"
+                    required
+                  ></textarea>
+                  <svg class="field__ring" aria-hidden="true"><rect class="field__ring-rect" width="100%" height="100%" rx="12" /></svg>
+                </div>
+                <button type="submit" class="btn btn--submit magnetic font-mono" id="submit-btn" data-magnetic data-cursor-label="Send">
+                  <span class="btn__label">Send message</span>
+                  <svg class="icon icon--plane" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                    <path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z" />
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+          <p class="section-num font-mono" aria-hidden="true">§ 05 / 06</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer section--reveal" aria-labelledby="footer-heading">
+      <div class="marquee marquee--footer font-mono" aria-hidden="true">
+        <div class="marquee__inner marquee__inner--reverse">
+          <span>Three.js</span><span>·</span><span>WebGL</span><span>·</span><span>GSAP</span><span>·</span
+          ><span>React Three Fiber</span><span>·</span><span>Shader Art</span><span>·</span
+          ><span>Motion Design</span><span>·</span><span>Immersive Web</span><span>·</span><span>Real-time 3D</span
+          ><span>·</span>
+          <span>Three.js</span><span>·</span><span>WebGL</span><span>·</span><span>GSAP</span><span>·</span
+          ><span>React Three Fiber</span><span>·</span><span>Shader Art</span><span>·</span
+          ><span>Motion Design</span><span>·</span><span>Immersive Web</span><span>·</span><span>Real-time 3D</span
+          ><span>·</span>
+        </div>
+      </div>
+      <div class="container footer__grid">
+        <div class="footer__brand">
+          <h2 id="footer-heading" class="visually-hidden">Footer</h2>
+          <a href="#hero" class="site-logo magnetic" data-magnetic data-cursor-label="Home">
+            <span class="site-logo__mark font-mono" aria-hidden="true">OR</span>
+            <span class="site-logo__text font-display">Or<span class="text-accent">ion</span></span>
+          </a>
+          <p class="footer__tag font-body">
+            We sculpt immersive, real-time digital experiences where technology becomes art. Global team. Infinite ambition.
+          </p>
+        </div>
+        <div>
+          <h3 class="footer__col-title font-mono">Work</h3>
+          <ul class="footer__links font-body">
+            <li><a href="#work">Projects</a></li>
+            <li><a href="#work">Case Studies</a></li>
+            <li><a href="#work">Awards</a></li>
+            <li><a href="#services">Process</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__col-title font-mono">Studio</h3>
+          <ul class="footer__links font-body">
+            <li><a href="#about">About</a></li>
+            <li><a href="#about">Team</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__col-title font-mono">Social</h3>
+          <ul class="footer__social">
+            <li>
+              <a href="https://twitter.com" class="social-link magnetic" data-magnetic rel="noopener noreferrer" target="_blank" aria-label="Twitter">
+                <svg class="icon" width="18" height="18" aria-hidden="true"><use href="icons.svg#x-icon" /></svg>
+                <span class="font-mono">Twitter</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://linkedin.com" class="social-link magnetic" data-magnetic rel="noopener noreferrer" target="_blank" aria-label="LinkedIn">
+                <span class="font-mono">LinkedIn</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://dribbble.com" class="social-link magnetic" data-magnetic rel="noopener noreferrer" target="_blank" aria-label="Dribbble">
+                <span class="font-mono">Dribbble</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com" class="social-link magnetic" data-magnetic rel="noopener noreferrer" target="_blank" aria-label="GitHub">
+                <svg class="icon" width="18" height="18" aria-hidden="true"><use href="icons.svg#github-icon" /></svg>
+                <span class="font-mono">GitHub</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer__copy font-mono container">© 2025 Orion Studio. All rights reserved.</p>
+      <p class="section-num font-mono container footer__section-num" aria-hidden="true">§ 06 / 06</p>
+    </footer>
+
+    <script type="module" src="assets/main.js"></script>
+  </body>
+</html>
